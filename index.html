@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Personal Portfolio</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src="https://kit.fontawesome.com/cb612fbe0d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <span></span>
+                <ul id="sidemenu">
+                    <li><a href="#header"><span>H</span>ome</a></li>
+                    <li><a href="#about"><span>A</span>bout</a></li>
+                    <li><a href="#services"><span>S</span>ervices</a></li>
+                    <li><a href="#portfolio"><span>P</span>ortfolio</a></li>
+                    <li><a href="#contact"><span>C</span>ontact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="header-text">
+                <h1>Hi, It's <span>Rahul Arya</span></h1>
+                <h2 class="text-animation">I'm a <span></span></h2>
+            </div>
+            <a href="Resume.pdf" class="download-cv-btn" download>Download CV</a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="about-col-1">
+                    <img src="header-dp.png" alt="">
+                </div>
+                
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a creative designer and developer, who aims to work with small businesses and marginalized communities to bring their passions to life. I offer both design and development services for web applications and websites.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')"><span>S</span>kills</p>
+                        <p class="tab-links" onclick="opentab('experience')"><span>E</span>xperience</p>
+                        <p class="tab-links" onclick="opentab('education')"><span>E</span>ducation</p>
+                        <p class="tab-links" onclick="opentab('certification')"><span>C</span>ertification</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages</span><br>HTML, CSS, Tailwind CSS, Python, SQL, PHP</li>
+                            <li><span>Frameworks</span><br>React JS, Node JS, Pandas, Numpy, Django, Bootstrap, JQuery</li>
+                            <li><span>Platforms</span><br>Visual Studio Code, Jupyter Notebook, Sublime</li>
+                            <li><span>Tools</span><br>GitHub, Apache, Excel, VBA, MySQL, Photoshop, Power BI, Google Sheets, Google Forms</li>
+                            <li><span>Soft Skills</span><br>Stakeholder Management, Excellent Communication, Troubleshooting</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>February 2024 - August 2024</span><br>Data Analyst - Sri Balaji Medical Institute</li>
+                            <li><span>March 2021 - January 2024</span><br>Quality Analyst - Lion Services Ltd.</li>
+                            <li><span>February 2018 - February 2021</span><br>Process Expert - Provana India Pvt. Ltd.</li>
+                            <li><span>September 2015 - January 2017</span><br>Associate - Suntec Web Service Pvt. Ltd.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2014</span><br>Bachelor of Computer Applications</li>
+                            <li><span>2009</span><br>Senior Secondary School (C.B.S.E)</li>
+                            <li><span>2007</span><br>Secondary School (C.B.S.E)</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="certification">
+                        <ul>
+                            <li><span>May 2014</span><br>Web Development Certification</li>
+                            <li><span>July 2024</span><br>Career Essentials in Data Analysis by Microsoft and LinkedIn</li>
+                            <li><span>August 2024</span><br>Tata Group Data Visualization Job Simulation</li>
+                            <li><span>September 2024</span><br>JPMorgan Chase & Co. Excel Skills Job Simulation</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title1">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2><span>Web</span> Designing</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, excepturi. Assumenda quidem, laboriosam sapiente obcaecati magnam voluptate repellendus, cum vitae laborum soluta voluptatibus eveniet sint blanditiis maiores id quo officiis?</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2><span>UI / UX</span> Designing</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, excepturi. Assumenda quidem, laboriosam sapiente obcaecati magnam voluptate repellendus, cum vitae laborum soluta voluptatibus eveniet sint blanditiis maiores id quo officiis?</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2><span>Web</span> Development</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, excepturi. Assumenda quidem, laboriosam sapiente obcaecati magnam voluptate repellendus, cum vitae laborum soluta voluptatibus eveniet sint blanditiis maiores id quo officiis?</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title1">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="project1.png" alt="Social Media App">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, excepturi.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="project2.png" alt="Music App">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, excepturi.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="project3.png" alt="Online Shopping App">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, excepturi.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i> rahularya5533@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> +91 0123456789</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>  
+                        <input type="email" name="Email" placeholder="Your E-mail" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="submit-btn">Submit</button>  
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>Copyright © 2013 - 2024 Rahul Arya | All Rights Reserved</p>
+    </div>
+
+    <!-- JavaScript Section -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-150px";
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxY2ns_jtRlocqzZkBLBI-ioHdcajDmHTE-e9JLIrEubA_Q9P-V8HoblQ6hyJuZKIRNiw/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully";
+                    setTimeout(function() {
+                        msg.innerHTML = "";
+                    }, 3000);
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+</body>
+</html>
