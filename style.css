@@ -26,7 +26,7 @@ body{
 
 #header{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background-color: #080808;
     background-size: cover;
     background-position: center;
@@ -186,7 +186,7 @@ nav ul li a:hover::after{
     color: #ababaa;
 }
 .row{
-    padding-block: 40px;
+    padding-block: 0px;
     height: 100%;
     width: 100%;
     display: flex;
@@ -414,20 +414,56 @@ nav ul li a:hover::after{
     color:#03C03C;
     transform: translateY(-5px);
 }
-.submit-btn {
-    display: inline-block; /* removed duplicate display property */
-    margin: 22px 15px;
-    width: fit-content;
-    border: 1px solid #080808; /* changed border color to match text color */
-    padding: 10px 35px;
-    border-radius: 40px;
-    text-decoration: none;
-    color: #080808; /* moved to top to avoid override */
-    font-weight: 650;
-    font-size: 13px;
+.submit-btn{
+    position: relative;
     background-color: white;
+    border-radius: 4em;
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    padding: 0.8em 1.8em;
+    margin-left: 15px;
+    cursor:pointer;
+    user-select:none;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
-}
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+  }
+  
+  .submit-btn:hover {
+    transition-duration: 0.1s;
+    background-color: white;
+  }
+  
+  .submit-btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px #03C03C;
+  }
+  
+  .submit-btn:active:after {
+    box-shadow: 0 0 0 0 white;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+  }
+  
+  .submit-btn:active {
+    top: 1px;
+  }
 
 .contact-right form {
     width: 100%;
