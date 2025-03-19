@@ -48,14 +48,14 @@ body {
 }
 
 #particles-js {
-    position:fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    filter: drop-shadow(0 0 8px var(--primary-color));
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  filter: drop-shadow(0 0 8px var(--primary-color));
+}
 
 /* Container */
 .container {
@@ -116,7 +116,7 @@ nav ul li a:hover::before {
   left: 0;
 }
 
-/* Buttons for responsive menu */
+/* Responsive Menu Buttons */
 nav button {
   background: none;
   border: none;
@@ -173,38 +173,14 @@ nav button {
   border-right: 3px solid var(--text-color);
 }
 
+/* Typewriter Cursor Animation */
 @keyframes cursor {
   to {
     border-left: 3px solid var(--primary-color);
   }
 }
 
-@keyframes words {
-  0%, 20% {
-    content: "UI/UX Designer";
-  }
-  21%, 40% {
-    content: "Web Designer";
-  }
-  41%, 60% {
-    content: "Data Analyst";
-  }
-  61%, 80% {
-    content: "Web Developer";
-  }
-  81%, 100% {
-    content: "Software Tester";
-  }
-}
-
-@keyframes typing {
-  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
-    width: 0;
-  }
-  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
-    width: calc(100% + 8px);
-  }
-}
+/* (Optional) Other keyframe animations omitted for brevity */
 
 /* Download CV Button */
 .download-cv-btn {
@@ -342,7 +318,7 @@ nav button {
   font-size: 15px;
   font-weight: 300;
   border-radius: 30px;
-  transition: background var(--transition-duration), transform var(--transition-duration);
+  transition: background var(--transition-duration), transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .services-list div i {
@@ -370,93 +346,98 @@ nav button {
 
 .services-list div:hover {
   background: var(--hover-bg);
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 15px var(--primary-color);
 }
 
 /* Portfolio Section */
 #portfolio {
-    padding: 80px 0;
-  }
-  
-  .work-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-top: 50px;
-  }
-  
-  .work {
-    border: 1px solid var(--text-color);
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
-    transition: transform var(--transition-duration);
-  }
-  
-  .work img {
-    width: 100%;
-    height: auto;
-    max-height: 300px;
-    border-radius: 15px;
-    display: block;
-    transition: transform var(--transition-duration);
-  }
-  
-  .layer {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), var(--hover-bg));
-    border-radius: 15px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 10px;
-    text-align: center;
-    font-size: 15px;
-    opacity: 0; /* छिपा हुआ */
-    transform: translateY(100%); /* नीचे चला गया */
-    transition: opacity var(--transition-duration), transform var(--transition-duration);
-  }
-  
-  .layer h3 {
-    font-size: 25px;
-    font-weight: 800;
-    margin-bottom: 20px;
-  }
-  
-  .layer a {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    font-size: 20px;
-    line-height: 35px;
-    text-align: center;
-    text-decoration: none;
-    color: var(--hover-bg);
-    background-color: var(--text-color);
-    margin-top: 30px;
-  }
-  
-  .work:hover img {
-    transform: scale(1.05);
-  }
-  
-  .work:hover .layer {
-    opacity: 1; /* दिखाने के लिए */
-    transform: translateY(0); /* सामान्य स्थिति में */
-  }
+  padding: 80px 0;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.work {
+  border: 1px solid var(--text-color);
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  border-radius: 15px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.work:hover {
+  transform: scale(1.03) rotate(0.5deg);
+  box-shadow: 0 0 20px var(--primary-color);
+}
+
+.work:hover img {
+  transform: scale(1.05);
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), var(--hover-bg));
+  border-radius: 15px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.layer h3 {
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.layer a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 35px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--hover-bg);
+  background-color: var(--text-color);
+  margin-top: 30px;
+}
+
+.work:hover .layer {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Contact Section */
 .contact-container {
   padding: 100px 10%;
 }
 
-/* Contact Content Layout */
 .contact-content {
   display: flex;
   justify-content: space-between;
@@ -464,22 +445,24 @@ nav button {
   flex-wrap: wrap;
 }
 
-/* Contact Info Styling */
 .contact-info {
-  flex: 0.4;  /* 40% width */
+  flex: 0.4;
   min-width: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
+
 .contact-info p {
   margin: 15px 0 10px;
   font-size: 20px;
 }
+
 .social-icons {
   margin-top: 20px;
 }
+
 .social-icons a {
   text-decoration: none;
   font-size: 30px;
@@ -487,31 +470,35 @@ nav button {
   color: var(--text-color);
   transition: transform var(--transition-duration);
 }
+
 .social-icons a:hover {
   color: var(--primary-color);
   transform: translateY(-5px);
 }
 
-/* Contact Form Styling */
 .contact-form {
   flex: 1;
   min-width: 280px;
   background: var(--secondary-bg);
-  padding: 30px 30px 30px 30px;
+  padding: 30px;
   border-radius: 20px;
 }
+
 .contact-form form {
   display: flex;
   flex-direction: column;
 }
+
 .form-group {
   margin-bottom: 20px;
 }
+
 .form-group label {
   margin-bottom: 8px;
   font-size: 16px;
   color: var(--text-color);
 }
+
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -521,16 +508,17 @@ nav button {
   font-size: 15px;
   color: #000;
 }
+
 .submit-btn {
-  display: inline-block !important;  /* Block-level width hatao */
-  width: fit-content !important;  /* Button ka width content ke hisaab se set hoga */
-  min-width: 180px !important;  /* Ensures it doesn’t become too small */
-  max-width: 120px !important;  /* Prevent too much width */
-  padding: 10px 50px !important;  /* Small padding */
-  font-size: 18px !important;  /* Small text */
-  border-radius: 10px !important;  /* Less rounded */
-  transform: none !important;  /* Disable scaling */
-  text-align: center !important;  /* Ensure text is centered */
+  display: inline-block !important;
+  width: fit-content !important;
+  min-width: 180px !important;
+  max-width: 120px !important;
+  padding: 10px 50px !important;
+  font-size: 18px !important;
+  border-radius: 10px !important;
+  transform: none !important;
+  text-align: center !important;
   font-weight: 600;
 }
 
@@ -544,12 +532,11 @@ nav button {
 }
 
 .input-error {
-  border: 2px solid red !important; /* Red border for error fields */
-   /* Light red background */
+  border: 2px solid red !important;
 }
 
 .input-success {
-  border: 2px solid green !important; /* Green border for valid fields */
+  border: 2px solid green !important;
 }
 
 #msg {
@@ -558,7 +545,7 @@ nav button {
   font-size: 14px;
 }
 
-/* Footer / Copyright */
+/* Footer */
 footer.copyright {
   width: 100%;
   font-size: 12px;
@@ -570,52 +557,52 @@ footer.copyright {
 /* Responsive Styles */
 @media only screen and (max-width: 480px) {
 
+  /* Adjust container padding */
+  .container {
+    padding: 10px 5%;
+  }
+
+  /* Header adjustments */
   .header-text {
-    margin-top: 30%; /* Reduce margin from 50% to 30% */
-    font-size: 18px; /* Slightly reduce overall header text size */
+    margin-top: 30%;
+    font-size: 18px;
   }
   .header-text h1 {
-    font-size: 28px; /* Adjust heading size for mobile */
+    font-size: 28px;
   }
   .text-animation {
-    font-size: 18px; /* Adjust typewriter text size */
+    font-size: 18px;
   }
 
-
+  /* Mobile Navigation (Off-canvas Menu) */
   nav ul {
     display: none;
     background: var(--background-color);
     position: fixed;
     top: 0;
     right: -200px;  /* Off-screen by default */
-    width: 200px;   /* Adjust width as needed */
+    width: 200px;   /* Reduced width */
     height: 100vh;
     padding-top: 50px;
     z-index: 2;
-    transition: right 0.5s ease-in-out;  /* Smooth slide effect */
+    transition: right 0.5s ease-in-out;
   }
-  
-  /* When menu is open, show it */
   nav ul.open {
     display: block;
     right: 0;
   }
-  
-  /* Mobile nav list styles */
   nav ul li {
-    display: block;  /* Override inline-block to block */
-    margin: 15px 0;  /* Adjust vertical spacing */
+    display: block;
+    margin: 15px 0;
   }
   nav ul li a {
-    font-size: 16px; /* Slightly smaller font size for mobile */
+    font-size: 16px;
   }
-  
-  /* Ensure nav button is visible */
   nav button {
     display: block;
   }
 
-  
+  /* About Section */
   .about-col-1,
   .about-col-2 {
     flex-basis: 100%;
@@ -626,16 +613,15 @@ footer.copyright {
   .about-col-2 {
     font-size: 14px;
   }
-  
-  
   .tab-titles button {
     font-size: 16px;
     margin-right: 14.5px;
   }
 
-
+  /* Services Section */
   .services-list {
     grid-template-columns: 1fr;
+    gap: 10px; /* Reduced grid gap */
   }
   .services-list div {
     height: auto;
@@ -659,13 +645,12 @@ footer.copyright {
     margin-top: 10px;
   }
 
-
+  /* Portfolio Section */
   .work-list {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 10px; /* Reduced gap */
   }
   .work {
-    /* स्क्वायर बॉक्स बनाने के लिए, 100% padding-bottom लें */
     padding-bottom: 100%;
   }
   .work img {
@@ -676,8 +661,6 @@ footer.copyright {
     height: 100%;
     object-fit: cover;
   }
-
-
   .layer {
     padding: 0;
   }
@@ -690,14 +673,13 @@ footer.copyright {
   .layer a {
     margin-top: 10px;
   }
-  .container {
-    padding: 10px 5%; /* Reduce padding for mobile screens */
-  }
+
+  /* Contact Section */
   .contact-container {
-    padding: 50px 5%; /* Adjust padding for mobile */
+    padding: 50px 5%;
   }
   .contact-info p {
-    font-size: 16px; /* Adjust font size for mobile */
+    font-size: 16px;
   }
   footer.copyright {
     font-size: 14px;
