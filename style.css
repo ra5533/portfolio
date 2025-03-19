@@ -580,8 +580,8 @@ footer.copyright {
     background: var(--background-color);
     position: fixed;
     top: 0;
-    right: -200px;  /* Off-screen by default */
-    width: 200px;   /* Reduced width */
+    right: -180px;  /* Off-screen by default */
+    width: 180px;   /* Reduced width */
     height: 100vh;
     padding-top: 50px;
     z-index: 2;
