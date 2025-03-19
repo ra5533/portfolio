@@ -173,14 +173,6 @@ nav button {
   border-right: 3px solid var(--text-color);
 }
 
-/* Typewriter Cursor Animation */
-@keyframes cursor {
-  to {
-    border-left: 3px solid var(--primary-color);
-  }
-}
-
-/* (Optional) Other keyframe animations omitted for brevity */
 
 /* Download CV Button */
 .download-cv-btn {
