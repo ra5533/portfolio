@@ -10,19 +10,18 @@
   <script src="https://kit.fontawesome.com/cb612fbe0d.js" crossorigin="anonymous" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
 </head>
-<div id="particles-js"></div>
 <body>
+  <div id="particles-js"></div>
   <header id="header">
     <div class="container">
       <nav>
-        <button id="menu-open" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+        <!-- Open/Close buttons removed -->
         <ul id="sidemenu">
           <li><a href="#header"><span>H</span>ome</a></li>
           <li><a href="#about"><span>A</span>bout</a></li>
           <li><a href="#services"><span>S</span>ervices</a></li>
           <li><a href="#portfolio"><span>P</span>ortfolio</a></li>
           <li><a href="#contact"><span>C</span>ontact</a></li>
-          <button id="menu-close" aria-label="Close Menu"><i class="fas fa-times"></i></button>
         </ul>
       </nav>
 
@@ -152,48 +151,43 @@
   <section id="contact">
     <div class="container contact-container">
       <h1 class="sub-title">Contact Me</h1>
-      <div class="contact-content">
-        <div class="contact-info">
-          <p><i class="fa-regular fa-paper-plane"></i> rahularya5533@gmail.com</p>
-          <p><i class="fa-solid fa-square-phone"></i> +91 0123456789</p>
-          <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-            <a href="https://github.com/ra5533/portfolio"><i class="fa-brands fa-square-github"></i></a>
-            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        <div class="contact-content">
+            <div class="contact-info">
+              <p><i class="fa-regular fa-paper-plane"></i> rahularya5533@gmail.com</p>
+              <p><i class="fa-solid fa-square-phone"></i> +91 0123456789</p>
+                <div class="social-icons">
+                  <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-square-github"></i></a>
+                  <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+          <div class="contact-form">
+              <form name="submit-to-google-sheet" novalidate>
+                <div class="form-group">
+                  <label for="name"></label>
+                  <input type="text" id="name" name="Name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email"></label>
+                  <input type="email" id="email" name="Email" placeholder="Your E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                </div>
+                <div class="form-group">
+                  <label for="message"></label>
+                  <textarea id="message" name="Message" rows="6" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+                <span id="msg"></span>
+              </form>
+            </div>
           </div>
-        </div>
-        <div class="contact-form">
-          <form name="submit-to-google-sheet" novalidate>
-            <div class="form-group">
-              <label for="name"></label>
-              <input type="text" id="name" name="Name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-              <label for="email"></label>
-              <input type="email" id="email" name="Email" placeholder="Your E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-            </div>
-            <div class="form-group">
-              <label for="message"></label>
-              <textarea id="message" name="Message" rows="6" placeholder="Your Message"></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Submit</button>
-            <span id="msg"></span>
-          </form>
-        </div>
       </div>
-    </div>
   </section>
 
   <footer class="copyright">
     <p>Copyright © 2013 - 2025 | Made by Rahul Arya | All Rights Reserved</p>
   </footer>
 
-
-
-
-
-  <!-- JavaScript Section -->
   <script defer>
     // Tab functionality using event listeners
     document.querySelectorAll('.tab-links').forEach(button => {
@@ -206,23 +200,6 @@
       });
     });
 
-
-
-    // Responsive menu functionality
-    const menuOpenBtn = document.getElementById('menu-open');
-    const menuCloseBtn = document.getElementById('menu-close');
-    const sideMenu = document.getElementById('sidemenu');
-
-    menuOpenBtn.addEventListener('click', () => {
-      sideMenu.classList.add("open");  // Add open class to slide in
-    });
-
-    menuCloseBtn.addEventListener('click', () => {
-      sideMenu.classList.remove("open");  // Remove open class to slide out
-    });
-
-    
-    
     // Form submission functionality
     const form = document.forms['submit-to-google-sheet'];
     const msg = document.getElementById('msg');
@@ -230,34 +207,27 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      // Get Form Fields
       const nameInput = document.getElementById('name');
       const emailInput = document.getElementById('email');
       const messageInput = document.getElementById('message');
 
-      const name = nameInput.value.trim();
-      const email = emailInput.value.trim();
-      const message = messageInput.value.trim();
-
-      // Reset previous errors
       nameInput.classList.remove('input-error', 'input-success');
       emailInput.classList.remove('input-error', 'input-success');
       messageInput.classList.remove('input-error', 'input-success');
 
       let hasError = false;
 
-      // **Check Empty Fields**
-      if (name === "") {
+      if (nameInput.value.trim() === "") {
         nameInput.classList.add('input-error');
         hasError = true;
       } 
 
-      if (email === "") {
+      if (emailInput.value.trim() === "") {
         emailInput.classList.add('input-error');
         hasError = true;
       } 
 
-      if (message === "") {
+      if (messageInput.value.trim() === "") {
         messageInput.classList.add('input-error');
         hasError = true;
       }
@@ -269,9 +239,8 @@
         return;
       }
 
-      // **Only Letters and Spaces Allowed in Name**
       const namePattern = /^[A-Za-z\s]+$/;
-      if (!namePattern.test(name)) {
+      if (!namePattern.test(nameInput.value.trim())) {
         nameInput.classList.add('input-error');
         msg.innerHTML = "⚠️ Name can only contain letters and spaces.";
         msg.style.color = "red";
@@ -281,9 +250,8 @@
         nameInput.classList.add('input-success');
       }
 
-      // **Strict Email Validation**
       const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-      if (!emailPattern.test(email) || email.length < 8) {
+      if (!emailPattern.test(emailInput.value.trim()) || emailInput.value.trim().length < 8) {
         emailInput.classList.add('input-error');
         msg.innerHTML = "⚠️ Please enter a valid email address.";
         msg.style.color = "red";
@@ -293,9 +261,8 @@
         emailInput.classList.add('input-success');
       }
 
-      // **Check Fake Email Domains**
       const fakeDomains = ["test.com", "example.com", "mailinator.com", "tempmail.com"];
-      const emailDomain = email.split("@")[1]; 
+      const emailDomain = emailInput.value.trim().split("@")[1]; 
       if (fakeDomains.includes(emailDomain)) {
         emailInput.classList.add('input-error');
         msg.innerHTML = "⚠️ This email domain is not allowed.";
@@ -304,7 +271,6 @@
         return;
       }
 
-      // **If Everything is Valid, Submit Form**
       fetch('https://script.google.com/macros/s/AKfycbxY2ns_jtRlocqzZkBLBI-ioHdcajDmHTE-e9JLIrEubA_Q9P-V8HoblQ6hyJuZKIRNiw/exec', {
         method: 'POST',
         body: new FormData(form)
@@ -325,36 +291,31 @@
       });
     });
 
-
-
-
     // Initialize particles.js after DOM content is loaded
-      window.addEventListener('DOMContentLoaded', () => {
-        particlesJS('particles-js', {
-          particles: {
-            number: { value: 80 },
-            color: { value: "#03C03C" },
-            shape: { type: "circle" },
-            opacity: { value: 0.7 },
-            size: { value: 3 },
-            move: { enable: true, speed: 1 }
-          },
-          interactivity: {
-            events: { onClick: { enable: false } }
-          }
-        });
+    window.addEventListener('DOMContentLoaded', () => {
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 80 },
+          color: { value: "#03C03C" },
+          shape: { type: "circle" },
+          opacity: { value: 0.7 },
+          size: { value: 3 },
+          move: { enable: true, speed: 1 }
+        },
+        interactivity: {
+          events: { onClick: { enable: false } }
+        }
       });
+    });
 
-
-
-      // JavaScript Typewriter Effect for Text Animation
-      document.addEventListener("DOMContentLoaded", function () {
+    // JavaScript Typewriter Effect for Text Animation
+    document.addEventListener("DOMContentLoaded", function () {
       const texts = ["UI/UX Designer", "Web Designer", "Data Analyst", "Web Developer", "Software Tester"];
       let currentTextIndex = 0;
       let currentCharIndex = 0;
-      const typeSpeed = 100; // Typing speed (smooth)
-      const eraseSpeed = 50; // Erasing speed
-      const pauseTime = 1500; // Time before erasing
+      const typeSpeed = 100;
+      const eraseSpeed = 50;
+      const pauseTime = 1500;
       const target = document.querySelector(".text-animation span");
 
       function type() {
@@ -378,7 +339,7 @@
         }
       }
 
-      type(); // Start animation
+      type();
     });
   </script>
 </body>
