@@ -114,42 +114,38 @@ if (form) {
 /* =========================
    Particles JS Init
 ========================= */
-window.addEventListener('DOMContentLoaded', () => {
-  if (window.particlesJS) {
-    particlesJS('particles-js', {
-      particles: {
-        number: { value: 80 },
-        color: { value: "#03C03C" },
-        shape: { type: "circle" },
-        opacity: { value: 0.7 },
-        size: { value: 3 },
-        move: { enable: true, speed: 1 }
-      },
-      interactivity: {
-        events: { onClick: { enable: false } }
-      }
-    });
-  }
-});
+if (window.particlesJS) {
+  particlesJS('particles-js', {
+    particles: {
+      number: { value: 80 },
+      color: { value: "#03C03C" },
+      shape: { type: "circle" },
+      opacity: { value: 0.7 },
+      size: { value: 3 },
+      move: { enable: true, speed: 1 }
+    },
+    interactivity: {
+      events: { onClick: { enable: false } }
+    }
+  });
+}
 
 /* =========================
    Typewriter Effect
 ========================= */
-document.addEventListener("DOMContentLoaded", () => {
-  const texts = [
-    "UI/UX Designer",
-    "Web Designer",
-    "Data Analyst",
-    "Web Developer",
-    "Software Tester"
-  ];
+const texts = [
+  "UI/UX Designer",
+  "Web Designer",
+  "Data Analyst",
+  "Web Developer",
+  "Software Tester"
+];
 
-  let textIndex = 0;
-  let charIndex = 0;
-  const target = document.querySelector(".text-animation span");
+let textIndex = 0;
+let charIndex = 0;
+const target = document.querySelector(".text-animation span");
 
-  if (!target) return;
-
+if (target) {
   function type() {
     if (charIndex < texts[textIndex].length) {
       target.textContent += texts[textIndex][charIndex++];
@@ -170,4 +166,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   type();
+}
+
 });
