@@ -548,10 +548,15 @@ nav button {
 footer.copyright {
   width: 100%;
   font-size: 12px;
-  text-align: center;
   margin-top: 20px;
-  padding: 10px 0;
+  padding: 15px 0;
+  text-align: center !important;
 }
+
+footer.copyright p {
+  text-align: center !important;
+}
+
 
 /* Responsive Styles */
 @media only screen and (max-width: 480px) {
