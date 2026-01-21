@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Web Developer, UI/UX, Portfolio, Rahul Arya">
+  <title>Personal Portfolio - Rahul Arya</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- External JS libraries -->
+  <script src="https://kit.fontawesome.com/cb612fbe0d.js" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <header id="header">
+    <div class="container">
+      <nav>
+        <!-- Open/Close buttons removed -->
+        <ul id="sidemenu">
+          <li><a href="#header"><span>H</span>ome</a></li>
+          <li><a href="#about"><span>A</span>bout</a></li>
+          <li><a href="#services"><span>S</span>ervices</a></li>
+          <li><a href="#portfolio"><span>P</span>ortfolio</a></li>
+          <li><a href="#contact"><span>C</span>ontact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-text">
+        <h1>Hi, It's <span>Rahul Arya</span></h1>
+        <h2 class="text-animation">I'm a <span></span></h2>
+      </div>
+      <a href="resume.pdf" class="download-cv-btn" download>Download CV</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="header-dp.png" alt="Rahul Arya Professional Photo">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>I am a creative designer and developer, who aims to work with small businesses and marginalized communities to bring their passions to life. I offer both design and development services for web applications and websites.</p>
+
+          <div class="tab-titles">
+            <button class="tab-links active-link" data-tab="skills"><span>S</span>kills</button>
+            <button class="tab-links" data-tab="experience"><span>E</span>xperience</button>
+            <button class="tab-links" data-tab="education"><span>E</span>ducation</button>
+            <button class="tab-links" data-tab="certification"><span>C</span>ertification</button>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Languages</span><br>HTML, CSS, Tailwind CSS, Python, SQL, PHP</li>
+              <li><span>Frameworks</span><br>React JS, Bootstrap</li>
+              <li><span>Platforms</span><br>Visual Studio Code, Jupyter Notebook, Sublime</li>
+              <li><span>Tools</span><br>GitHub, Apache, Excel, MySQL, Photoshop, Google Sheets, Google Forms</li>
+              <li><span>Soft Skills</span><br>Stakeholder Management, Excellent Communication, Troubleshooting</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>February 2024 - August 2024</span><br>Data Analyst - Sri Balaji Medical Institute</li>
+              <li><span>March 2021 - January 2024</span><br>Quality Analyst - Lion Services Ltd.</li>
+              <li><span>February 2018 - February 2021</span><br>Process Expert - Provana India Pvt. Ltd.</li>
+              <li><span>September 2015 - January 2017</span><br>Associate - Suntec Web Service Pvt. Ltd.</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2014</span><br>Bachelor of Computer Applications</li>
+              <li><span>2009</span><br>Senior Secondary School (C.B.S.E)</li>
+              <li><span>2007</span><br>Secondary School (C.B.S.E)</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="certification">
+            <ul>
+              <li><span>May 2014</span><br>Web Development Certification</li>
+              <li><span>July 2024</span><br>Career Essentials in Data Analysis by Microsoft and LinkedIn</li>
+              <li><span>August 2024</span><br>Tata Group Data Visualization Job Simulation</li>
+              <li><span>September 2024</span><br>JPMorgan Chase &amp; Co. Excel Skills Job Simulation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2><span>Web</span> Designing</h2>
+          <p>Custom website design with responsive layouts, optimized for user experience and SEO.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-crop"></i>
+          <h2><span>UI / UX</span> Designing</h2>
+          <p>Custom UI / UX design with responsive layouts, optimized for user experience.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div>
+          <i class="fa-brands fa-app-store-ios"></i>
+          <h2><span>Web</span> Development</h2>
+          <p>Social media app built with React and Firebase, featuring real-time chat and post sharing.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <article class="work">
+          <img src="project1.png" alt="Social Media App">
+          <div class="layer">
+            <h3>Social Media App</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, excepturi.</p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </article>
+        <article class="work">
+          <img src="project2.png" alt="Music App">
+          <div class="layer">
+            <h3>Music App</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, excepturi.</p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </article>
+        <article class="work">
+          <img src="project3.png" alt="Online Shopping App">
+          <div class="layer">
+            <h3>Online Shopping App</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, excepturi.</p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container contact-container">
+      <h1 class="sub-title">Contact Me</h1>
+        <div class="contact-content">
+            <div class="contact-info">
+              <p><i class="fa-regular fa-paper-plane"></i> rahularya5533@gmail.com</p>
+              <p><i class="fa-solid fa-square-phone"></i> +91 0123456789</p>
+                <div class="social-icons">
+                  <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-square-github"></i></a>
+                  <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+          <div class="contact-form">
+              <form name="submit-to-google-sheet" novalidate>
+                <div class="form-group">
+                  <label for="name"></label>
+                  <input type="text" id="name" name="Name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email"></label>
+                  <input type="email" id="email" name="Email" placeholder="Your E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                </div>
+                <div class="form-group">
+                  <label for="message"></label>
+                  <textarea id="message" name="Message" rows="6" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+                <span id="msg"></span>
+              </form>
+            </div>
+          </div>
+      </div>
+  </section>
+
+  <footer class="copyright">
+    <p>Copyright © 2013 - 2025 | Made by Rahul Arya | All Rights Reserved</p>
+  </footer>
+
+  <script defer>
+    // Tab functionality using event listeners
+    document.querySelectorAll('.tab-links').forEach(button => {
+      button.addEventListener('click', () => {
+        const tab = button.getAttribute('data-tab');
+        document.querySelectorAll('.tab-links').forEach(btn => btn.classList.remove('active-link'));
+        document.querySelectorAll('.tab-contents').forEach(content => content.classList.remove('active-tab'));
+        button.classList.add('active-link');
+        document.getElementById(tab).classList.add('active-tab');
+      });
+    });
+
+    // Form submission functionality
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById('msg');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const messageInput = document.getElementById('message');
+
+      nameInput.classList.remove('input-error', 'input-success');
+      emailInput.classList.remove('input-error', 'input-success');
+      messageInput.classList.remove('input-error', 'input-success');
+
+      let hasError = false;
+
+      if (nameInput.value.trim() === "") {
+        nameInput.classList.add('input-error');
+        hasError = true;
+      } 
+
+      if (emailInput.value.trim() === "") {
+        emailInput.classList.add('input-error');
+        hasError = true;
+      } 
+
+      if (messageInput.value.trim() === "") {
+        messageInput.classList.add('input-error');
+        hasError = true;
+      }
+
+      if (hasError) {
+        msg.innerHTML = "⚠️ Please fill out all fields correctly.";
+        msg.style.color = "red";
+        setTimeout(() => msg.innerHTML = "", 1500);
+        return;
+      }
+
+      const namePattern = /^[A-Za-z\s]+$/;
+      if (!namePattern.test(nameInput.value.trim())) {
+        nameInput.classList.add('input-error');
+        msg.innerHTML = "⚠️ Name can only contain letters and spaces.";
+        msg.style.color = "red";
+        setTimeout(() => msg.innerHTML = "", 1500);
+        return;
+      } else {
+        nameInput.classList.add('input-success');
+      }
+
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailPattern.test(emailInput.value.trim()) || emailInput.value.trim().length < 8) {
+        emailInput.classList.add('input-error');
+        msg.innerHTML = "⚠️ Please enter a valid email address.";
+        msg.style.color = "red";
+        setTimeout(() => msg.innerHTML = "", 1500);
+        return;
+      } else {
+        emailInput.classList.add('input-success');
+      }
+
+      const fakeDomains = ["test.com", "example.com", "mailinator.com", "tempmail.com"];
+      const emailDomain = emailInput.value.trim().split("@")[1]; 
+      if (fakeDomains.includes(emailDomain)) {
+        emailInput.classList.add('input-error');
+        msg.innerHTML = "⚠️ This email domain is not allowed.";
+        msg.style.color = "red";
+        setTimeout(() => msg.innerHTML = "", 1500);
+        return;
+      }
+
+      fetch('https://script.google.com/macros/s/AKfycbxY2ns_jtRlocqzZkBLBI-ioHdcajDmHTE-e9JLIrEubA_Q9P-V8HoblQ6hyJuZKIRNiw/exec', {
+        method: 'POST',
+        body: new FormData(form)
+      })
+      .then(response => {
+        msg.innerHTML = "✅ Message sent successfully!";
+        msg.style.color = "green";
+        setTimeout(() => msg.innerHTML = "", 1500);
+        form.reset();
+        nameInput.classList.remove('input-success');
+        emailInput.classList.remove('input-success');
+        messageInput.classList.remove('input-success');
+      })
+      .catch(error => {
+        msg.innerHTML = "❌ Failed to send. Try again!";
+        msg.style.color = "red";
+        setTimeout(() => msg.innerHTML = "", 1500);
+      });
+    });
+
+    // Initialize particles.js after DOM content is loaded
+    window.addEventListener('DOMContentLoaded', () => {
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 80 },
+          color: { value: "#03C03C" },
+          shape: { type: "circle" },
+          opacity: { value: 0.7 },
+          size: { value: 3 },
+          move: { enable: true, speed: 1 }
+        },
+        interactivity: {
+          events: { onClick: { enable: false } }
+        }
+      });
+    });
+
+    // JavaScript Typewriter Effect for Text Animation
+    document.addEventListener("DOMContentLoaded", function () {
+      const texts = ["UI/UX Designer", "Web Designer", "Data Analyst", "Web Developer", "Software Tester"];
+      let currentTextIndex = 0;
+      let currentCharIndex = 0;
+      const typeSpeed = 100;
+      const eraseSpeed = 50;
+      const pauseTime = 1500;
+      const target = document.querySelector(".text-animation span");
+
+      function type() {
+        if (currentCharIndex < texts[currentTextIndex].length) {
+          target.textContent += texts[currentTextIndex].charAt(currentCharIndex);
+          currentCharIndex++;
+          setTimeout(type, typeSpeed);
+        } else {
+          setTimeout(erase, pauseTime);
+        }
+      }
+
+      function erase() {
+        if (currentCharIndex > 0) {
+          target.textContent = texts[currentTextIndex].substring(0, currentCharIndex - 1);
+          currentCharIndex--;
+          setTimeout(erase, eraseSpeed);
+        } else {
+          currentTextIndex = (currentTextIndex + 1) % texts.length;
+          setTimeout(type, 500);
+        }
+      }
+
+      type();
+    });
+  </script>
+</body>
+</html>
